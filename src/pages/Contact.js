@@ -4,6 +4,7 @@ import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, Tab
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import EmailIcon from '@mui/icons-material/Email';
 import CallIcon from '@mui/icons-material/Call';
+import { Flare } from '@mui/icons-material';
 const Contact = () => {
   return (
     <Layout>
@@ -13,6 +14,10 @@ const Contact = () => {
         "& h4": {
           fontWeight: 'bold',
           mb: 2
+        },
+        "@media (max-width:600px)": {
+          ml: 0,
+          textAlign: 'center' // Text ko center align karne ke liye
         }
       }}>
         <Typography variant='h4'>
@@ -27,7 +32,7 @@ const Contact = () => {
         </p>
       </Box>
       <Box sx={{margin:3,width:'600px',ml:10,"@media (max-width:600px)":{
-        width:'300px'
+        width:'100%',ml:0,display:'flex',justifyContent:'center',alignItems:'center'
       }}}>
         <TableContainer component={Paper}>
           <Table aria-label='contact table'>
